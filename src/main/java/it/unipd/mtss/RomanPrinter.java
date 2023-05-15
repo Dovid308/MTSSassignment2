@@ -48,10 +48,19 @@ String[] X = {
   "/__/ \\__\\ "
 };
 
+String[] L = {" __      ",
+"|  |     ",
+"|  |     ",
+"|  |     ",
+"|  `----.",
+"|_______|"
+};
+
   HashMap<Character, String[]> map = new HashMap<>();
   map.put('I', I);
   map.put('V', V); 
   map.put('X', X); 
+  map.put('L', L);
 
 
 
