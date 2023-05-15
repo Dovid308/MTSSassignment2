@@ -55,24 +55,24 @@ public class IntegerToRomanTest
     }
 
     @Test
-    public void testNumber69()
-    {
-        String result = IntegerToRoman.convert(69);
-        assertEquals(result, "LXIX");
-    }
-
-    @Test
-    public void testNumber86()
-    {
-        String result = IntegerToRoman.convert(86);
-        assertEquals(result, "LXXXVI");
-    }
-
-    @Test
     public void testNumber99()
     {
         String result = IntegerToRoman.convert(99);
         assertEquals(result, "XCIX");
+    }
+
+    @Test
+    public void testNumber344()
+    {
+        String result = IntegerToRoman.convert(344);
+        assertEquals(result, "CCCXLIV");
+    }
+
+    @Test
+    public void testNumber499()
+    {
+        String result = IntegerToRoman.convert(499);
+        assertEquals(result, "CDXCIX");
     }
 
     @Test(expected = IllegalArgumentException.class)
