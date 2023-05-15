@@ -28,9 +28,20 @@ public class RomanPrinter{
       "|  | ",
       "|__| "
   };
+  
+  
+  String[] V = {
+    "____    ____ ",
+    "\\   \\  /   / ",
+    " \\   \\/   /  ",
+    "  \\      /   ",
+    "   \\    /    ",
+    "    \\__/     "
+};
 
   HashMap<Character, String[]> map = new HashMap<>();
   map.put('I', I);
+  map.put('V', V); 
 
 
 

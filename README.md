@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/Dovid308/MTSSassignment2/badge.svg?branch=main)](https://coveralls.io/github/Dovid308/MTSSassignment2?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/Dovid308/MTSSassignment2/badge.svg?branch=master)](https://coveralls.io/github/Dovid308/MTSSassignment2?branch=master)
 
 ![Checkstyle](.github/badges/checkstyle-result.svg)
 
