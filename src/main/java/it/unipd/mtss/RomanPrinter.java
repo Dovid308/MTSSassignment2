@@ -39,9 +39,19 @@ public class RomanPrinter{
     "    \\__/     "
 };
 
+String[] X = {
+  "___   ___ ",
+  "\\  \\ /  / ",
+  " \\  V  /  ",
+  "  >   <   ",
+  " /  .  \\  ",
+  "/__/ \\__\\ "
+};
+
   HashMap<Character, String[]> map = new HashMap<>();
   map.put('I', I);
   map.put('V', V); 
+  map.put('X', X); 
 
 
 
