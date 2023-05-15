@@ -19,19 +19,19 @@ import org.mockito.Mockito;
 
 
     @Test(expected = IllegalArgumentException.class)
-    public void testoimputnegativo_conmockito(){
+    public void testInputnegativo_conmockito(){
         try(MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)){
             utilities.when(()->IntegerToRoman.convert(-1)).thenThrow(IllegalArgumentException.class);
             RomanPrinter.print(-1);}}
     
     @Test
-    public void testolastampadelnumero0_conmockito(){
+    public void testStampanumero0_conmockito(){
         try(MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)){
             utilities.when(()->IntegerToRoman.convert(0)).thenReturn(""); 
             assertEquals("", RomanPrinter.print(0));
     }}
     @Test
-    public void testolastampadelnumero3_conmockito(){
+    public void testStampalnumero3_conmockito(){
 
         String pattern =
                  " __   __   __  \n" +
@@ -48,7 +48,7 @@ import org.mockito.Mockito;
     }}
 
     @Test
-    public void testolastampadelnumero4_conmockito(){
+    public void testStampanumero4_conmockito(){
 
         String pattern = " __  ____    ____ \n" +
              "|  | \\   \\  /   / \n" +
@@ -65,7 +65,7 @@ import org.mockito.Mockito;
     }}
 
     @Test
-    public void testolastampadelnumero9_conmockito(){
+    public void testStampanumero9_conmockito(){
 
         String pattern = " __  ___   ___ \n" +
         "|  | \\  \\ /  / \n" +
@@ -80,6 +80,25 @@ import org.mockito.Mockito;
         assertEquals(pattern, RomanPrinter.print(9));
 
     }}
+
+    @Test
+    public void testStampanumero18_conmockito(){
+
+        String pattern = "___   ___ ____    ____  __   __   __  \n" +
+             "\\  \\ /  / \\   \\  /   / |  | |  | |  | \n" +
+             " \\  V  /   \\   \\/   /  |  | |  | |  | \n" +
+             "  >   <     \\      /   |  | |  | |  | \n" +
+             " /  .  \\     \\    /    |  | |  | |  | \n" +
+             "/__/ \\__\\     \\__/     |__| |__| |__| ";
+
+        
+                      
+    try(MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)){
+        utilities.when(()->IntegerToRoman.convert(18)).thenReturn("XVIII"); 
+        assertEquals(pattern, RomanPrinter.print(18));
+
+    }}
+    
     
 
     
