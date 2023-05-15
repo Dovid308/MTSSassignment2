@@ -143,12 +143,12 @@ import org.mockito.Mockito;
     public void testStampanumero99_conmockito(){
 
         String pattern = 
-             "___   ___   ______   __  ___   ___ \n" +
-             "\\  \\ /  /  /      | |  | \\  \\ /  / \n" +
-             " \\  V  /  |  ,----' |  |  \\  V  /  \n" +
-             "  >   <   |  |      |  |   >   <   \n" +
-             " /  .  \\  |  `----. |  |  /  .  \\  \n" +
-             "/__/ \\__\\  \\______| |__| /__/ \\__\\ ";
+             "___   ___   ______  __  ___   ___ \n" +
+             "\\  \\ /  /  /      ||  | \\  \\ /  / \n" +
+             " \\  V  /  |  ,----'|  |  \\  V  /  \n" +
+             "  >   <   |  |     |  |   >   <   \n" +
+             " /  .  \\  |  `----.|  |  /  .  \\  \n" +
+             "/__/ \\__\\  \\______||__| /__/ \\__\\ ";
 
         
 
@@ -162,6 +162,45 @@ import org.mockito.Mockito;
 
     }}
     
+    @Test
+    public void testStampanumero500_conmockito(){
+
+        
+        String pattern =
+        " _______  \n"
+        + "|       \\ \n" 
+        + "|  .--.  |\n"
+        + "|  |  |  |\n"
+        + "|  '--'  |\n"
+        + "|_______/ ";
+
+                      
+    try(MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)){
+        utilities.when(()->IntegerToRoman.convert(500)).thenReturn("D"); 
+        assertEquals(pattern, RomanPrinter.print(500));
+
+    }}
+    
+
+    @Test
+    public void testStampanumero499_conmockito(){
+
+        
+        String pattern = 
+                   "  ______  _______  ___   ___   ______  __  ___   ___ \n"
+                 + " /      ||       \\ \\  \\ /  /  /      ||  | \\  \\ /  / \n"
+                 + "|  ,----'|  .--.  | \\  V  /  |  ,----'|  |  \\  V  /  \n"
+                 + "|  |     |  |  |  |  >   <   |  |     |  |   >   <   \n"
+                 + "|  `----.|  '--'  | /  .  \\  |  `----.|  |  /  .  \\  \n"
+                 + " \\______||_______/ /__/ \\__\\  \\______||__| /__/ \\__\\ ";
+
+        
+                      
+    try(MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)){
+        utilities.when(()->IntegerToRoman.convert(499)).thenReturn("CDXCIX"); 
+        assertEquals(pattern, RomanPrinter.print(499));
+
+    }}
 
     
 
