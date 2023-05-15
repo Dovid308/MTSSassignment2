@@ -8,40 +8,27 @@ package it.unipd.mtss;
 public class IntegerToRoman {
 
     public static String convert(int number) throws IllegalArgumentException {
-        String s = "L'intero deve essere compreso tra 0 e 50";
-        if(number < 0 || number > 50) {
+        String s = "L'intero deve essere compreso tra 0 e 100";
+        if(number < 0 || number > 100) {
             throw new IllegalArgumentException(s);
         }
 
         String roman = "";
 
-        while (number >= 50) {
-            roman += "L";
-            number = number - 50;
-        }
-        while (number >= 40) {
-            roman += "XL";
-            number = number - 40;
-        }
-        while (number >= 10) {
-            roman = roman + "X";
-            number = number - 10;
-        }
-        while (number >= 9) {
-            roman = roman + "IX";
-            number = number - 9;
-        }
-        while (number >= 5) {
-            roman += "V";
-            number = number - 5;
-        }
-        while (number >= 4) {
-            roman += "IV";
-            number = number - 4;
-        }  
-        while(number >= 1){
-            roman = roman + "I";
-            number = number - 1;
+        String[] numeriRomani =
+         {"C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+        int[] numeriArabi =
+        {100, 90, 50, 40, 10, 9, 5, 4, 1 };
+
+        int i=0;
+
+        while (number > 0) {
+            while (number >= numeriArabi[i]) {
+                
+                roman += numeriRomani[i];
+                number -= numeriArabi[i];
+            }
+            i++;
         }
 
         return roman;

@@ -104,11 +104,11 @@ import org.mockito.Mockito;
     public void testStampanumero49_conmockito(){
 
         String pattern = "___   ___  __       __  ___   ___ \n" +
-             "\\  \\ /  / |  |     |  | \\  \\ /  / \n" +
-             " \\  V  /  |  |     |  |  \\  V  /  \n" +
-             "  >   <   |  |     |  |   >   <   \n" +
-             " /  .  \\  |  `----.|  |  /  .  \\  \n" +
-             "/__/ \\__\\ |_______||__| /__/ \\__\\ ";
+             "\\  \\ /  / |  |      |  | \\  \\ /  / \n" +
+             " \\  V  /  |  |      |  |  \\  V  /  \n" +
+             "  >   <   |  |      |  |   >   <   \n" +
+             " /  .  \\  |  `----. |  |  /  .  \\  \n" +
+             "/__/ \\__\\ |_______| |__| /__/ \\__\\ ";
 
 
         
@@ -138,6 +138,32 @@ import org.mockito.Mockito;
         assertEquals(pattern, RomanPrinter.print(38));
 
     }}
+
+    @Test
+    public void testStampanumero99_conmockito(){
+
+        String pattern = 
+             "___   ___   ______   __  ___   ___ \n" +
+             "\\  \\ /  /  /      | |  | \\  \\ /  / \n" +
+             " \\  V  /  |  ,----' |  |  \\  V  /  \n" +
+             "  >   <   |  |      |  |   >   <   \n" +
+             " /  .  \\  |  `----. |  |  /  .  \\  \n" +
+             "/__/ \\__\\  \\______| |__| /__/ \\__\\ ";
+
+        
+
+
+
+        
+                      
+    try(MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)){
+        utilities.when(()->IntegerToRoman.convert(99)).thenReturn("XCIX"); 
+        assertEquals(pattern, RomanPrinter.print(99));
+
+    }}
+    
+
+    
 
     
     
