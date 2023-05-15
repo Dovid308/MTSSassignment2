@@ -49,19 +49,32 @@ String[] X = {
 };
 
 String[] L = {" __      ",
-"|  |     ",
-"|  |     ",
-"|  |     ",
-"|  `----.",
-"|_______|"
+"|  |      ",
+"|  |      ",
+"|  |      ",
+"|  `----. ",
+"|_______| "
 };
+
+
+String[] C = {
+  "  ______  ",
+  " /      | ",
+  "|  ,----' ",
+  "|  |      ",
+  "|  `----. ",
+  " \\______| "
+};
+
+
+
 
   HashMap<Character, String[]> map = new HashMap<>();
   map.put('I', I);
   map.put('V', V); 
   map.put('X', X); 
   map.put('L', L);
-
+  map.put('C', C);
 
 
   String[] ris = new String[I.length]; 
