@@ -27,24 +27,31 @@ public class IntegerToRomanTest
     }
 
     @Test
-    public void testNumber4()
-    {
-        String result = IntegerToRoman.convert(4);
-        assertEquals(result, "IV");
-    }
-
-    @Test
-    public void testNumber5()
-    {
-        String result = IntegerToRoman.convert(5);
-        assertEquals(result, "V");
-    }
-
-    @Test
     public void testNumber6()
     {
         String result = IntegerToRoman.convert(6);
         assertEquals(result, "VI");
+    }
+
+    @Test
+    public void testNumber8()
+    {
+        String result = IntegerToRoman.convert(8);
+        assertEquals(result, "VIII");
+    }
+
+    @Test
+    public void testNumber9()
+    {
+        String result = IntegerToRoman.convert(9);
+        assertEquals(result, "IX");
+    }
+
+    @Test
+    public void testNumber10()
+    {
+        String result = IntegerToRoman.convert(10);
+        assertEquals(result, "X");
     }
 
     @Test(expected = IllegalArgumentException.class)
