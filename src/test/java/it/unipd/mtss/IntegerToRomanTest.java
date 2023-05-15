@@ -34,13 +34,6 @@ public class IntegerToRomanTest
     }
 
     @Test
-    public void testNumber8()
-    {
-        String result = IntegerToRoman.convert(8);
-        assertEquals(result, "VIII");
-    }
-
-    @Test
     public void testNumber9()
     {
         String result = IntegerToRoman.convert(9);
@@ -48,10 +41,31 @@ public class IntegerToRomanTest
     }
 
     @Test
-    public void testNumber10()
+    public void testNumber13()
     {
-        String result = IntegerToRoman.convert(10);
-        assertEquals(result, "X");
+        String result = IntegerToRoman.convert(13);
+        assertEquals(result, "XIII");
+    }
+
+    @Test
+    public void testNumber18()
+    {
+        String result = IntegerToRoman.convert(18);
+        assertEquals(result, "XVIII");
+    }
+
+    @Test
+    public void testNumber19()
+    {
+        String result = IntegerToRoman.convert(19);
+        assertEquals(result, "XIX");
+    }
+
+    @Test
+    public void testNumber20()
+    {
+        String result = IntegerToRoman.convert(20);
+        assertEquals(result, "XX");
     }
 
     @Test(expected = IllegalArgumentException.class)
