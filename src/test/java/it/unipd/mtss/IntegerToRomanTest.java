@@ -62,17 +62,17 @@ public class IntegerToRomanTest
     }
 
     @Test
-    public void testNumber344()
-    {
-        String result = IntegerToRoman.convert(344);
-        assertEquals(result, "CCCXLIV");
-    }
-
-    @Test
     public void testNumber499()
     {
         String result = IntegerToRoman.convert(499);
         assertEquals(result, "CDXCIX");
+    }
+
+    @Test
+    public void testNumber999()
+    {
+        String result = IntegerToRoman.convert(999);
+        assertEquals(result, "CMXCIX");
     }
 
     @Test(expected = IllegalArgumentException.class)
