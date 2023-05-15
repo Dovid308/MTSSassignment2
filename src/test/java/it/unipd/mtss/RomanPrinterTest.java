@@ -202,7 +202,25 @@ import org.mockito.Mockito;
 
     }}
 
+    @Test
     
+    public void testStampanumero999_conmockito(){
+
+        
+        String pattern =
+                   "  ______  _______  ___   ___   ______  __  ___   ___ \n"
+                 + " /      ||       \\ \\  \\ /  /  /      ||  | \\  \\ /  / \n"
+                 + "|  ,----'|  .--.  | \\  V  /  |  ,----'|  |  \\  V  /  \n"
+                 + "|  |     |  |  |  |  >   <   |  |     |  |   >   <   \n"
+                 + "|  `----.|  '--'  | /  .  \\  |  `----.|  |  /  .  \\  \n"
+                 + " \\______||_______/ /__/ \\__\\  \\______||__| /__/ \\__\\ ";
+
+        
+    try(MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)){
+        utilities.when(()->IntegerToRoman.convert(999)).thenReturn("CDXCIX"); 
+        assertEquals(pattern, RomanPrinter.print(999));
+
+    }}
 
     
     

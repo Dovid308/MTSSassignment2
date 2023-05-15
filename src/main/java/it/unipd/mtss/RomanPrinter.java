@@ -74,6 +74,14 @@ String[] D = {
   "|  '--'  |",
   "|_______/ "
 };
+String[] M = {
+  ".___  ___.",
+  "|   \\/   |",
+  "|  \\  /  |",
+  "|  |\\/|  |",
+  "|  |  |  |",
+  "|__|  |__|"
+};
 
 
 
@@ -85,6 +93,7 @@ String[] D = {
   map.put('L', L);
   map.put('C', C);
   map.put('D', D); 
+  map.put('M', M); 
 
 
   String[] ris = new String[I.length]; 
