@@ -16,7 +16,8 @@ public class RomanPrinter{
 
 
 
-  private static String printAsciiArt(String romanNumber)  throws IllegalArgumentException{
+  private static String printAsciiArt(String romanNumber)
+  throws IllegalArgumentException{
     if(romanNumber=="") {return "";} 
   
     String[] I = {
