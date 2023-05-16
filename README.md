@@ -2,11 +2,11 @@
 
 ![Checkstyle](.github/badges/checkstyle-result.svg)
 
-![example workflow](https://github.com/Dovid308/MTSSassignment2/actions/workflows/build.yml/badge.svg)                                                                                                                
-Giacomo D'Ovidio 2009101
+![example workflow](https://github.com/Dovid308/MTSSassignment2/actions/workflows/build.yml/badge.svg)                                                                                                              
 
-Davide Malgarise 2009994
+# MTSSassignment2
+Metodi e Tecnologie per lo Sviluppo Software
 
-
-
-Assignment numero 2 del corso Metodi e Tecnologie per lo sviluppo Software
+### Gruppo
+- Giacomo D'Ovidio 2009101
+- Davide Malgarise 2009994
